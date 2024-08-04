@@ -1,0 +1,32 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      timezone-enum:
+        specifier: ^1.0.4
+        version: 1.0.4
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
+packages:
+
+  timezone-enum@1.0.4:
+    resolution: {integrity: sha512-CihBHcf/JZEtDF1xSDAXPHbfjpOhRxUtE4dhbYqeI8Zuy1zq79AgQ5hMkf38uA4WZb24U3VHzKcOmmcvfsefXw==}
+
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+snapshots:
+
+  timezone-enum@1.0.4: {}
+
+  typescript@5.5.4: {}

@@ -1,0 +1,92 @@
+{
+	"name": "@isithere/gtfs",
+	"private": false,
+	"version": "1.0.0",
+	"description": "Building, procesing and interacting with GTFS in JS easier!",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepublish": "tsc"
+	},
+	"keywords": [],
+	"author": "IsItHere Team <developer_xp+npm@isithere.sk> (https://iih.icu/devs)",
+	"contributors": [
+		"0CharlieCat <meow@charliecat.space>"
+	],
+	"license": "ISC",
+	"dependencies": {
+		"timezone-enum": "^1.0.4",
+		"typescript": "^5.5.4"
+	},
+	"exports": {
+		".": "./index.js",
+		"./Agency": {
+			"types": "./Agency.d.ts",
+			"require": "./Agency.js"
+		},
+		"./Area": {
+			"types": "./Area.d.ts",
+			"require": "./Area.js"
+		},
+		"./Calendar": {
+			"types": "./Calendar.d.ts",
+			"require": "./Calendar.js"
+		},
+		"./CalendarDate": {
+			"types": "./CalendarDate.d.ts",
+			"require": "./CalendarDate.js"
+		},
+		"./FareAttributione": {
+			"types": "./FareAttribution.d.ts",
+			"require": "./FareAttribution.js"
+		},
+		"./FareLegRules": {
+			"types": "./FareLegRules.d.ts",
+			"require": "./FareLegRules.js"
+		},
+		"./FareMedia": {
+			"types": "./FareMedia.d.ts",
+			"require": "./FareMedia.js"
+		},
+		"./FareProduct": {
+			"types": "./FareProduct.d.ts",
+			"require": "./FareProduct.js"
+		},
+		"./FareRule": {
+			"types": "./FareRule.d.ts",
+			"require": "./FareRule.js"
+		},
+		"./FareTransferRule": {
+			"types": "./FareTransferRule.d.ts",
+			"require": "./FareTransferRule.js"
+		},
+		"./FeedInfo": {
+			"types": "./FeedInfo.d.ts",
+			"require": "./FeedInfo.js"
+		},
+		"./Network": {
+			"types": "./Network.d.ts",
+			"require": "./Network.js"
+		},
+		"./Route": {
+			"types": "./Route.d.ts",
+			"require": "./Route.js"
+		},
+		"./Stop": {
+			"types": "./Stop.d.ts",
+			"require": "./Stop.js"
+		},
+		"./StopTime": {
+			"types": "./StopTime.d.ts",
+			"require": "./StopTime.js"
+		},
+		"./Timeframe": {
+			"types": "./Timeframe.d.ts",
+			"require": "./Timeframe.js"
+		},
+		"./Trip": {
+			"types": "./Trip.d.ts",
+			"require": "./Trip.js"
+		}
+	}
+}
