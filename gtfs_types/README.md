@@ -87,7 +87,7 @@ These GTFS Sheets are currenly suported
 ## Transparency Notice
 
 This package is maintained by [IsItHere's Developer XP Team](https://iih.icu/devs) and is dogfooded internally by IsItHere in everyday Feed Processing and Data Enchancement.
-Certain Edge cases might be missing or added in could be not coresponding with the current GTFS specification. For any bugs, questions and ideas, please visit [IsItHere Packages Issue Tracker](https://github.com/da-cathub/iih__packages)
+Certain Edge cases might be missing or added in, could be not coresponding with the current GTFS specification. For any bugs, questions and ideas, please visit [IsItHere Packages Issue Tracker](https://github.com/da-cathub/iih__packages)
 
 **Made in Bratislava**
 IsItHere • isithere.sk
