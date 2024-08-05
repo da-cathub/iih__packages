@@ -1,12 +1,13 @@
 {
 	"name": "@isithere/gtfs",
 	"private": false,
-	"version": "1.0.0",
+	"version": "1.1.0-next-01",
 	"description": "Building, procesing and interacting with GTFS in JS easier!",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"prepublish": "tsc"
+		"prepublish": "tsc",
+		"publish:next": "pnpm publish --access public --tag next"
 	},
 	"keywords": [],
 	"author": "IsItHere Team <developer_xp+npm@isithere.sk> (https://iih.icu/devs)",
