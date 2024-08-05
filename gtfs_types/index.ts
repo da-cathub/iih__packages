@@ -1,3 +1,5 @@
+
+// Classicals
 export * from "./Agency"
 export * from "./Area"
 export * from "./Calendar"
@@ -15,3 +17,6 @@ export * from "./Stop"
 export * from "./StopTime"
 export * from "./Timeframe"
 export * from "./Trip"
+
+// Enums or Extensions
+export * from "./RouteVehicleType"

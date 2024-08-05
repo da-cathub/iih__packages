@@ -1,4 +1,5 @@
 import { Agency } from "./Agency";
+import { RouteVehicleType, RouteVehicleTypeExtended } from "./RouteVehicleType"
 
 export class Route {
     /*
@@ -75,7 +76,7 @@ export class Route {
 	shortName?: string;
 	lostName?: string;
 	description?: string;
-	type: RouteVehicleType;
+	type: RouteVehicleType | RouteVehicleTypeExtended;
 	url?: 		string | URL;
 	backgoundColor?: string;
 	foregroundColor?: string;
@@ -85,7 +86,7 @@ export class Route {
 	networkID?: string;
 
 	constructor(init: 
-		{ id: string; agency: Agency | string; shortName?: string; lostName?: string; description?: string; type: RouteVehicleType; url?: string | URL; backgoundColor?: string; foregroundColor?: string; sortOrder?: number; continousPickUp?: RouteContinuous; continuousDropOff?: RouteContinuous; networkID?: string; } |
+		{ id: string; agency: Agency | string; shortName?: string; lostName?: string; description?: string; type: RouteVehicleType | RouteVehicleTypeExtended; url?: string | URL; backgoundColor?: string; foregroundColor?: string; sortOrder?: number; continousPickUp?: RouteContinuous; continuousDropOff?: RouteContinuous; networkID?: string; } |
 		GTFSRouteObject | any
 	) {
         if (init.hasOwnProperty('id')) {
@@ -142,22 +143,6 @@ export class Route {
     }
 }
 
-export enum RouteVehicleType {
-	Tram = 0,
-	Streetcar = 0,
-	LightRail = 0,
-	Subway = 1,
-	Metro = 1,
-	Rail = 2,
-	Bus = 3,
-	Ferry = 4,
-	CableCar = 5,
-	ArealLift = 6,
-	Funicular = 7,
-	Trolleybus = 11,
-	Monorail = 12
-}
-
 export enum RouteContinuous {
 	Continuous = 0,
 	NoContinuous = 1,
@@ -171,7 +156,7 @@ export interface GTFSRouteObject {
 	route_short_name: string;
 	route_long_name: string;
 	route_desc: string;
-	route_type: RouteVehicleType;
+	route_type: RouteVehicleType | RouteVehicleTypeExtended;
 	route_url: string;
 	route_color: string;
 	route_text_color: string;
