@@ -1,3 +1,5 @@
+import { dateToGTFS } from "./_Univeral";
+
 export class CalendarDate {
 
     service: string;
@@ -17,7 +19,7 @@ export class CalendarDate {
     public toJSON() {
         return {
             service_id: this.service,
-            date: this.date,
+            date: dateToGTFS(this.date),
             exception_type: this.exception
         }
     }

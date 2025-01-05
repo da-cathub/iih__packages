@@ -1,3 +1,5 @@
+import { dateToGTFS } from "./_Univeral";
+
 export class Calendar {
 
 	id: string;
@@ -47,8 +49,8 @@ export class Calendar {
 			"friday": (this.friday) ? 1 : 0,
 			"saturday": (this.saturday) ? 1 : 0,
 			"sunday": (this.sunday) ? 1 : 0,
-			"start_date": this.start,
-			"end_date": this.end
+			"start_date": dateToGTFS(this.start),
+			"end_date": dateToGTFS(this.end)
 		}
 	}
 

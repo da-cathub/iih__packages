@@ -1,3 +1,5 @@
+import { dateToGTFS } from "./_Univeral";
+
 export class Timeframe {
     timeframeGroup: string;
     start?: string;
@@ -19,8 +21,8 @@ export class Timeframe {
     public toJSON() {
         return {
             "timeframe_group_id": this.timeframeGroup,
-            "start_time": this.start,
-            "end_time": this.end,
+            "start_time": this.start ?? "",
+            "end_time": this.end ?? "",
             "service_id": this.service
         }
     }

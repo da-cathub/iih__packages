@@ -1,3 +1,5 @@
+import { dateToGTFS } from "./_Univeral";
+
 export class FeedInfo {
     publisherName: string;
     publisherUrl: string;
@@ -41,11 +43,11 @@ export class FeedInfo {
             "feed_publisher_url": this.publisherUrl,
             "feed_lang": this.lang,
             "default_lang": this.defaultLang,
-            "feed_start_date": this.start,
-            "feed_end_date": this.end,
-            "feed_version": this.version,
-            "feed_contact_email": this.contactEmail,
-            "feed_contact_url": this.contactUrl
+            "feed_start_date": this.start ? dateToGTFS(this.start) : "",
+            "feed_end_date": this.end ? dateToGTFS(this.end) : "",
+            "feed_version": this.version ?? "",
+            "feed_contact_email": this.contactEmail ?? "",
+            "feed_contact_url": this.contactUrl ?? ""
         }
     }
 }

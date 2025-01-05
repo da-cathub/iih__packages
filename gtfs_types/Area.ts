@@ -10,7 +10,7 @@ export class Area {
     public toJSON() {
         return {
             "area_id": this.id,
-            "area_name": this.name
+            "area_name": this.name ?? ""
         }
     }
 

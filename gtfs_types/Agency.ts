@@ -57,10 +57,10 @@ export class Agency {
 			"agency_name": 		this.name,
 			"agency_url": 		this.url as string,
 			"agency_timezone": 	this.timezone as string,
-			"agency_lang": 		this.lang,
-			"agency_phone": 	this.phone,
+			"agency_lang": 		this.lang ?? "",
+			"agency_phone": 	this.phone ?? "",
 			"agency_fare_url": 	(this.fareURL ?? "") as string,
-			"agency_email": 	this.email
+			"agency_email": 	this.email ?? ""
 		  }
 	}
 
