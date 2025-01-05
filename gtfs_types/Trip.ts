@@ -52,13 +52,13 @@ export class Trip {
             "route_id": this.route,
             "service_id": this.service,
             "trip_id": this.id,
-            "trip_headsign": this.headsign,
-            "trip_short_name": this.shortName,
-            "direction_id": this.direction,
-            "block_id": this.block,
-            "shape_id": this.shape,
-            "wheelchair_accessible": this.wheelchairAccessible,
-            "bikes_allowed": this.bikesAllowed
+            "trip_headsign": this.headsign ?? "",
+            "trip_short_name": this.shortName ?? "",
+            "direction_id": this.direction ?? "",
+            "block_id": this.block ?? "",
+            "shape_id": this.shape ?? "",
+            "wheelchair_accessible": this.wheelchairAccessible ?? "",
+            "bikes_allowed": this.bikesAllowed ?? ""
         }
     }
 

@@ -32,7 +32,7 @@ export class FareAttribute {
             "currency_type": this.currencyType,
             "payment_method": this.paymentMethod,
             "transfers": this.transfers,
-            "agency_id": this.agency,
+            "agency_id": this.agency ?? "",
             "transfer_duration": this.transferDuration
         }
     }

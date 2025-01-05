@@ -16,7 +16,7 @@ export class FareMedia {
     public toJSON() {
         return {
             "fare_media_id": this.id,
-            "fare_media_name": this.name,
+            "fare_media_name": this.name ?? "",
             "fare_media_type": this.type
         }
     }

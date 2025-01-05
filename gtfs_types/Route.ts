@@ -124,17 +124,17 @@ export class Route {
 		return {
 			route_id: this.id,
 			agency_id: this.agency,
-			route_short_name: this.shortName,
-			route_long_name: this.longName,
-			route_desc: this.description,
+			route_short_name: this.shortName ?? "",
+			route_long_name: this.longName ?? "",
+			route_desc: this.description ?? "",
 			route_type: this.type,
-			route_url: this.url,
-			route_color: this.backgroundColor,
-			route_text_color: this.foregroundColor,
-			route_sort_order: this.sortOrder,
-			continuous_pickup: this.continousPickUp,
-			continuous_drop_off: this.continuousDropOff,
-			network_id: this.networkID,
+			route_url: this.url ?? "",
+			route_color: this.backgroundColor ?? "",
+			route_text_color: this.foregroundColor ?? "",
+			route_sort_order: this.sortOrder ?? "",
+			continuous_pickup: this.continousPickUp ?? "",
+			continuous_drop_off: this.continuousDropOff ?? "",
+			network_id: this.networkID ?? "",
 		}
 	}
 

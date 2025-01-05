@@ -42,7 +42,7 @@ export class FeedInfo {
             "feed_publisher_name": this.publisherName,
             "feed_publisher_url": this.publisherUrl,
             "feed_lang": this.lang,
-            "default_lang": this.defaultLang,
+            "default_lang": this.defaultLang ?? "",
             "feed_start_date": this.start ? dateToGTFS(this.start) : "",
             "feed_end_date": this.end ? dateToGTFS(this.end) : "",
             "feed_version": this.version ?? "",

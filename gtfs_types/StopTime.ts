@@ -61,23 +61,23 @@ export class StopTime {
     public toJSON() {
         return {
             "trip_id": this.trip,
-            "arrival_time": this.arrival,
-            "departure_time": this.departure,
-            "stop_id": this.stop,
-            "location_group_id": this.locationGroup,
-            "location_id": this.location,
+            "arrival_time": this.arrival ?? "",
+            "departure_time": this.departure ?? "",
+            "stop_id": this.stop ?? "",
+            "location_group_id": this.locationGroup ?? "",
+            "location_id": this.location ?? "",
             "stop_sequence": this.stopSequence,
-            "stop_headsign": this.headsign,
-            "start_pickup_drop_off_window": this.startPickupDropOffWindow,
-            "end_pickup_drop_off_window": this.endPickupDropOffWindow,
-            "pickup_type": this.pickUp,
-            "drop_off_type": this.dropOff,
-            "continuous_pickup": this.continuousPickUp,
-            "continuous_drop_off": this.continuousDropOff,
-            "shape_dist_traveled": this.shapeDististanceTraveled,
-            "timepoint": this.timepoint,
-            "pickup_booking_rule_id": this.pickup_booking_rule,
-            "drop_off_booking_rule_id": this.drop_off_booking_rule
+            "stop_headsign": this.headsign ?? "",
+            "start_pickup_drop_off_window": this.startPickupDropOffWindow ?? "",
+            "end_pickup_drop_off_window": this.endPickupDropOffWindow ?? "",
+            "pickup_type": this.pickUp ?? "",
+            "drop_off_type": this.dropOff ?? "",
+            "continuous_pickup": this.continuousPickUp ?? "",
+            "continuous_drop_off": this.continuousDropOff ?? "",
+            "shape_dist_traveled": this.shapeDististanceTraveled ?? "",
+            "timepoint": this.timepoint ?? "",
+            "pickup_booking_rule_id": this.pickup_booking_rule ?? "",
+            "drop_off_booking_rule_id": this.drop_off_booking_rule ?? ""
         }
     }
 

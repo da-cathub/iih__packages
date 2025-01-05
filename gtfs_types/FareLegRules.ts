@@ -27,12 +27,12 @@ export class FareLegRule {
 
     public toJSON() {
         return {
-            "leg_group_id": this.legGroup,
-            "network_id": this.network,
-            "from_area_id": this.fromArea,
-            "to_area_id": this.toArea,
-            "from_timeframe_group_id": this.fromTimeframeGroup,
-            "to_timeframe_group_id": this.toTimeframeGroup,
+            "leg_group_id": this.legGroup ?? "",
+            "network_id": this.network ?? "",
+            "from_area_id": this.fromArea ?? "",
+            "to_area_id": this.toArea ?? "",
+            "from_timeframe_group_id": this.fromTimeframeGroup ?? "",
+            "to_timeframe_group_id": this.toTimeframeGroup ?? "",
             "fare_product_id": this.fareProduct
         }
     }

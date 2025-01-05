@@ -27,13 +27,13 @@ export class FareTransferRule {
 
     public toJSON() {
         return {
-            "from_leg_group": this.fromLegGroup,
-            "to_leg_group": this.toLegGroup,
-            "transfer_count": this.transferCount,
-            "duration_limit": this.durationLimit,
-            "duration_limit_type": this.durationLimitType,
+            "from_leg_group": this.fromLegGroup ?? "",
+            "to_leg_group": this.toLegGroup ?? "",
+            "transfer_count": this.transferCount ?? "",
+            "duration_limit": this.durationLimit ?? "",
+            "duration_limit_type": this.durationLimitType ?? "",
             "fare_transfer_type": this.fareTransferType,
-            "fare_product": this.fareProduct
+            "fare_product": this.fareProduct ?? ""
         }
     }
 

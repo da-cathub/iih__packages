@@ -150,9 +150,9 @@ export class Stop {
 			"zone_id": this.zone ?? "",
 			"stop_url": String(this.url ?? ""),
 			"location_type": this.locationType,
-			"parent_station": String(this.parentStation),
+			"parent_station": String(this.parentStation ?? ""),
 			"stop_timezone": this.timezone ?? "",
-			"wheelchair_boarding": this.wheelchairBoarding,
+			"wheelchair_boarding": this.wheelchairBoarding ?? "",
 			"level_id": this.levelID ?? "",
 			"platform_code": this.platformCode ?? ""
 		}

@@ -22,8 +22,8 @@ export class FareProduct {
     public toJSON() {
         return {
             "fare_product_id": this.id,
-            "fare_product_name": this.name,
-            "fare_media_id": this.fareMedia,
+            "fare_product_name": this.name ?? "",
+            "fare_media_id": this.fareMedia ?? "",
             "amount": this.amount,
             "currency": this.currency
         }

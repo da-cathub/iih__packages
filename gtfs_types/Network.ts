@@ -10,7 +10,7 @@ export class Network {
     public toJSON() {
         return {
             "network_id": this.id,
-            "network_name": this.name
+            "network_name": this.name ?? ""
         }
     }
 

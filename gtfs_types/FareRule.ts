@@ -22,10 +22,10 @@ export class FareRule {
     public toJSON() {
         return {
             "fare_id": this.fare,
-            "route_id": this.route,
-            "origin_id": this.origin,
-            "destination_id": this.destination,
-            "contains_id": this.contains
+            "route_id": this.route ?? "",
+            "origin_id": this.origin ?? "",
+            "destination_id": this.destination ?? "",
+            "contains_id": this.contains ?? ""
         }
     }
 
