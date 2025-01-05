@@ -74,7 +74,7 @@ export class Route {
 	id: string;
 	agency: Agency | string;
 	shortName?: string;
-	lostName?: string;
+	longName?: string;
 	description?: string;
 	type: RouteVehicleType | RouteVehicleTypeExtended;
 	url?: 		string | URL;
@@ -86,14 +86,14 @@ export class Route {
 	networkID?: string;
 
 	constructor(init: 
-		{ id: string; agency: Agency | string; shortName?: string; lostName?: string; description?: string; type: RouteVehicleType | RouteVehicleTypeExtended; url?: string | URL; backgroundColor?: string; foregroundColor?: string; sortOrder?: number; continousPickUp?: RouteContinuous; continuousDropOff?: RouteContinuous; networkID?: string; } |
+		{ id: string; agency: Agency | string; shortName?: string; longName?: string; description?: string; type: RouteVehicleType | RouteVehicleTypeExtended; url?: string | URL; backgroundColor?: string; foregroundColor?: string; sortOrder?: number; continousPickUp?: RouteContinuous; continuousDropOff?: RouteContinuous; networkID?: string; } |
 		GTFSRouteObject | any
 	) {
         if (init.hasOwnProperty('id')) {
 			this.id = init.id;
 			this.agency = init.agency;
 			this.shortName = init.shortName;
-			this.lostName = init.lostName;
+			this.longName = init.longName;
 			this.description = init.description;
 			this.type = init.type;
 			this.url = init.url;
@@ -107,7 +107,7 @@ export class Route {
 			this.id = init.route_id;
 			this.agency = init.agency_id;
 			this.shortName = init.route_short_name;
-			this.lostName = init.route_long_name;
+			this.longName = init.route_long_name;
 			this.description = init.route_desc;
 			this.type = init.route_type;
 			this.url = init.route_url;
@@ -125,7 +125,7 @@ export class Route {
 			route_id: this.id,
 			agency_id: this.agency,
 			route_short_name: this.shortName,
-			route_long_name: this.lostName,
+			route_long_name: this.longName,
 			route_desc: this.description,
 			route_type: this.type,
 			route_url: this.url,
