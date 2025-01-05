@@ -1,7 +1,7 @@
 {
 	"name": "@isithere/gtfs",
 	"private": false,
-	"version": "1.1.0-next-01",
+	"version": "1.1.0-next-02",
 	"description": "Building, procesing and interacting with GTFS in JS easier!",
 	"main": "index.js",
 	"scripts": {
