@@ -78,7 +78,7 @@ export class Route {
 	description?: string;
 	type: RouteVehicleType | RouteVehicleTypeExtended;
 	url?: 		string | URL;
-	backgoundColor?: string;
+	backgroundColor?: string;
 	foregroundColor?: string;
 	sortOrder?: Number;
 	continousPickUp?: RouteContinuous;
@@ -86,7 +86,7 @@ export class Route {
 	networkID?: string;
 
 	constructor(init: 
-		{ id: string; agency: Agency | string; shortName?: string; lostName?: string; description?: string; type: RouteVehicleType | RouteVehicleTypeExtended; url?: string | URL; backgoundColor?: string; foregroundColor?: string; sortOrder?: number; continousPickUp?: RouteContinuous; continuousDropOff?: RouteContinuous; networkID?: string; } |
+		{ id: string; agency: Agency | string; shortName?: string; lostName?: string; description?: string; type: RouteVehicleType | RouteVehicleTypeExtended; url?: string | URL; backgroundColor?: string; foregroundColor?: string; sortOrder?: number; continousPickUp?: RouteContinuous; continuousDropOff?: RouteContinuous; networkID?: string; } |
 		GTFSRouteObject | any
 	) {
         if (init.hasOwnProperty('id')) {
@@ -97,7 +97,7 @@ export class Route {
 			this.description = init.description;
 			this.type = init.type;
 			this.url = init.url;
-			this.backgoundColor = init.backgoundColor;
+			this.backgroundColor = init.backgroundColor;
 			this.foregroundColor = init.foregroundColor;
 			this.sortOrder = init.sortOrder;
 			this.continousPickUp = init.continousPickUp;
@@ -111,7 +111,7 @@ export class Route {
 			this.description = init.route_desc;
 			this.type = init.route_type;
 			this.url = init.route_url;
-			this.backgoundColor = init.route_color;
+			this.backgroundColor = init.route_color;
 			this.foregroundColor = init.route_text_color;
 			this.sortOrder = init.route_sort_order;
 			this.continousPickUp = init.continuous_pickup;
@@ -129,7 +129,7 @@ export class Route {
 			route_desc: this.description,
 			route_type: this.type,
 			route_url: this.url,
-			route_color: this.backgoundColor,
+			route_color: this.backgroundColor,
 			route_text_color: this.foregroundColor,
 			route_sort_order: this.sortOrder,
 			continuous_pickup: this.continousPickUp,
