@@ -1,1 +1,2 @@
 export const dateToGTFS = (date: Date) => `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}`;
+export type BooleanyValue = 0 | 1;
