@@ -17,6 +17,8 @@ export * from "./Stop"
 export * from "./StopTime"
 export * from "./Timeframe"
 export * from "./Trip"
+export * from "./Pathway"
+export * from "./Level"
 
 // Enums or Extensions
 export * from "./RouteVehicleType"
