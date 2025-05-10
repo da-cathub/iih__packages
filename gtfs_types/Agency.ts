@@ -29,7 +29,7 @@ export class Agency {
 	fareURL?: string | URL;
 	email?: string;
 
-	constructor(init: { id: string, name: string, url: string | URL, timezone?: string | Timezone, lang?: string, phone?: string, fareURL?: string | URL, email?: string } | GTFSAgencyObject | any) {
+	constructor(init: AgencyValues | GTFSAgencyObject | any) {
 		if (init.hasOwnProperty('id')) {
 			this.id = init.id
 			this.name = init.name
@@ -78,4 +78,15 @@ export interface GTFSAgencyObject {
 	agency_phone?: string;
 	agency_fare_url?: string;
 	agency_email?: string;
+}
+
+export interface AgencyValues {
+	id: string;
+	name: string;
+	url: string | URL;
+	timezone?: string | Timezone;
+	lang?: string;
+	phone?: string;
+	fareURL?: string | URL;
+	email?: string;
 }

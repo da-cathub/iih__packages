@@ -67,22 +67,28 @@ console.log(customNotationStop.toJSON())	// Outputs JSONated GTFS Stop Notation.
 These GTFS Sheets are currenly suported
 
 - Agency
-- Area
+- Stop
+- Route
+- Trip
+- StopTime
 - Calendar
 - CalendarDate
 - FareAttribution
-- FareLegRules
+- FareRule
+- Timeframe
+- RiderCategory
 - FareMedia
 - FareProduct
-- FareRule
+- FareLegRules
 - FareTransferRule
-- FeedInfo
+- Area
+- StopArea
 - Network
-- Route
-- Stop
-- StopTime
-- Timeframe
-- Trip
+- RouteNetwork
+- Shape
+- Frequency
+- 
+- FeedInfo
 
 ## Transparency Notice
 
