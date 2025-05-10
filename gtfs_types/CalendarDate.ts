@@ -29,3 +29,9 @@ export enum CalendarDateExcpetion {
     Added = 1,
     Removed = 2
 }
+
+export interface GTFSCalendarDateObject {
+	service_id: string;
+	date: string;
+	exception_type: CalendarDateExcpetion;
+}

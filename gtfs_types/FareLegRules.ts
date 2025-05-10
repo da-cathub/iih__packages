@@ -41,3 +41,13 @@ export class FareLegRule {
         return `${this.legGroup}_${this.fareProduct}`;
     }
 }
+
+export interface GTFSFareLegRuleObject {
+	leg_group_id: string;
+	network_id: string;
+	from_area_id: string;
+	to_area_id: string;
+	from_timeframe_group_id: string;
+	to_timeframe_group_id: string;
+	fare_product_id: string;
+}

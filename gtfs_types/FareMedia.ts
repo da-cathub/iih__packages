@@ -33,3 +33,9 @@ export enum FareMediaType {
     cEMV = 3,
     MobileApp = 4
 }
+
+export interface GTFSFareMediaObject {
+	fare_media_id: string;
+	fare_media_name: string;
+	fare_media_type: FareMediaType;
+}

@@ -18,3 +18,8 @@ export class Area {
         return this.id;
     }
 }
+
+export interface GTFSAreaObject {
+	area_id: string;
+	area_name: string;
+}

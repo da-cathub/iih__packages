@@ -18,3 +18,8 @@ export class Network {
         return this.id;
     }
 }
+
+export interface GTFSNetworkObject {
+	network_id: string;
+	network_name: string;
+}

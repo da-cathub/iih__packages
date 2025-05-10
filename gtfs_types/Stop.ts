@@ -2,7 +2,7 @@ import Timezone from 'timezone-enum';
 
 export class Stop {
 
-    /*
+	/*
 	
 	Field Name			Type									Presence					Description
 	stop_id				Unique ID								Required					Identifies a location: stop/platform, station, entrance/exit, generic node or boarding area (see location_type).
@@ -78,7 +78,7 @@ export class Stop {
 	level_id			Foreign ID referencing levels.level_id	Optional					Level of the location. The same level may be used by multiple unlinked stations.
 	platform_code		Text									Optional					Platform identifier for a platform stop (a stop belonging to a station). This should be just the platform identifier (eg. "G" or "3"). Words like “platform” or "track" (or the feed’s language-specific equivalent) should not be included. This allows feed consumers to more easily internationalize and localize the platform identifier into other languages.
 
-    */
+	*/
 
 	id: string;
 	code?: string;
@@ -88,7 +88,7 @@ export class Stop {
 	latitude?: number;
 	longitude?: number;
 	zone?: string;
-	url?: 		string | URL;
+	url?: string | URL;
 	locationType: StopLocationType;
 	parentStation?: string | Stop;
 	timezone?: Timezone | string;
@@ -96,7 +96,7 @@ export class Stop {
 	levelID?: string;
 	platformCode?: string;
 
-	constructor(init: 
+	constructor(init:
 		{ id: string; code?: string; name?: string; nameTTS?: string; description?: string; latitude?: number; longitude?: number; zone?: string; url?: string | URL; locationType: StopLocationType; parentStation?: string | Stop; timezone?: Timezone | string; wheelchairBoarding?: StopWheelchairBoarding; levelID?: string; platformCode?: string; } |
 		GTFSStopObject | any
 	) {
@@ -136,7 +136,7 @@ export class Stop {
 		}
 
 		//console.log(init.parent_station || init.parentStation)
-    }
+	}
 
 	public toJSON() {
 		return {
@@ -166,22 +166,38 @@ export class Stop {
 		//console.log(this.parentStation)
 		return (!!this.parentStation || String(this.parentStation).length != 0)
 	}
-	
+
 }
 
 export enum StopLocationType {
-	Platform		= 0,
-	Station			= 1,
-	Enterance		= 2,
-	GenericNode		= 3,
-	BoardingArea	= 4
+	Platform = 0,
+	Station = 1,
+	Enterance = 2,
+	GenericNode = 3,
+	BoardingArea = 4
 }
 
 export enum StopWheelchairBoarding {
-	NoInformation 	= 0,
-	Inherit 		= 0,
-	Possible 		= 1,
-	NotPossible 	= 2
+	NoInformation = 0,
+	Inherit = 0,
+	Possible = 1,
+	NotPossible = 2
 }
 
-export interface GTFSStopObject { stop_id: any, stop_code: any, stop_name: string, tts_stop_name: string, stop_desc: string, stop_lat: number, stop_lon: number, zone_id: any, stop_url: string, location_type: number, parent_station: any, stop_timezone: string, wheelchair_boarding: number, level_id: any, platform_code: any }
+export interface GTFSStopObject {
+	stop_id: any,
+	stop_code: any,
+	stop_name: string,
+	tts_stop_name: string,
+	stop_desc: string, 
+	stop_lat: number, 
+	stop_lon: number, 
+	zone_id: any, 
+	stop_url: string, 
+	location_type: StopLocationType, 
+	parent_station: any, 
+	stop_timezone: string, 
+	wheelchair_boarding: StopWheelchairBoarding, 
+	level_id: any, 
+	platform_code: any
+}

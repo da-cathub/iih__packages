@@ -3,7 +3,7 @@ export class FareTransferRule {
     toLegGroup?: string;
     transferCount?: number;
     durationLimit?: number;
-    durationLimitType?: number;
+    durationLimitType?: FareTransferDurationLimitType;
     fareTransferType: number;
     fareProduct?: string;
 
@@ -12,7 +12,7 @@ export class FareTransferRule {
         toLegGroup?: string;
         transferCount?: number;
         durationLimit?: number;
-        durationLimitType?: number;
+        durationLimitType?: FareTransferDurationLimitType;
         fareTransferType: number;
         fareProduct?: string;
     }) {
@@ -40,4 +40,38 @@ export class FareTransferRule {
     public toString() {
         return `${this.fromLegGroup}_${this.toLegGroup}_${this.fareProduct}_${this.transferCount}_${this.durationLimit}`;
     }
+}
+
+export enum FareTransferDurationLimitType {
+	/*
+	0 - Between the departure fare validation of the current leg and the arrival fare validation of the next leg.
+	1 - Between the departure fare validation of the current leg and the departure fare validation of the next leg.
+	2 - Between the arrival fare validation of the current leg and the departure fare validation of the next leg.
+	3 - Between the arrival fare validation of the current leg and the arrival fare validation of the next leg.
+	*/
+	DepartureArrival = 0,
+	DepartureDeparture = 1,
+	ArrivalDeparture = 2,
+	ArrivalArrival = 3
+}
+
+export enum FareTransferType {
+	/*
+	0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB.
+	1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B.
+	2 - fare_transfer_rules.fare_product_id; AB.
+	*/
+	FromLegPlusTransfer = 0,
+	FromLegPlusTransferPlusToLeg = 1,
+	TransferOnly = 2
+}
+
+export interface GTFSFareTransferRuleObject {
+	from_leg_group: string;
+	to_leg_group: string;
+	transfer_count: number;
+	duration_limit: number;
+	duration_limit_type: FareTransferDurationLimitType;
+	fare_transfer_type: number;
+	fare_product: string;
 }

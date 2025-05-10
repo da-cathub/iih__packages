@@ -33,3 +33,11 @@ export class FareRule {
         return `${this.fare}_${this.route}_${this.origin}_${this.destination}_${this.contains}`;
     }
 }
+
+export interface GTFSFareRuleObject {
+	fare_id: string;
+	route_id?: string;
+	origin_id?: string;
+	destination_id?: string;
+	contains_id?: string;
+}

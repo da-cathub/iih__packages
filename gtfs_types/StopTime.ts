@@ -105,3 +105,22 @@ export enum Timepoint {
     Approximate = 0,
     Exact = 1
 }
+
+export interface GTFSStopTimeObject {
+	trip_id: string;
+	arrival_time: string;
+	departure_time: string;
+	stop_id: string;
+	location_group_id: string;
+	location_id: string;
+	stop_sequence: number;
+	stop_headsign: string;
+	start_pickup_drop_off_window: string;
+	end_pickup_drop_off_window: string;
+	pickup_type: StopTimePickDrop;
+	drop_off_type: StopTimePickDrop;
+	continuous_pickup: StopTimeContinuous;
+	continuous_drop_off: StopTimeContinuous;
+	shape_dist_traveled: number;
+	timepoint: Timepoint;
+}

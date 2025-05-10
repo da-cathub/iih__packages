@@ -31,3 +31,10 @@ export class Timeframe {
         return `${this.timeframeGroup}_${this.start}_${this.end}_${this.service}`;
     }
 }
+
+export interface GTFSTimeframeObject {
+	timeframe_group_id: string;
+	start_time: string;
+	end_time: string;
+	service_id: string;
+}

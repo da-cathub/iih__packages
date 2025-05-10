@@ -1,4 +1,4 @@
-import { dateToGTFS } from "./_Univeral";
+import { BooleanyValue, dateToGTFS } from "./_Univeral";
 
 export class Calendar {
 
@@ -58,4 +58,17 @@ export class Calendar {
         return this.id;
     }
 
+}
+
+export interface GTFSCalendarObject {
+	service_id: string;
+	monday: BooleanyValue;
+	tuesday: BooleanyValue;
+	wednesday: BooleanyValue;
+	thursday: BooleanyValue;
+	friday: BooleanyValue;
+	saturday: BooleanyValue;
+	sunday: BooleanyValue;
+	start_date: string;
+	end_date: string;
 }

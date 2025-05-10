@@ -53,3 +53,13 @@ export enum FareAttributeTransfers {
     TwoTransfers = "2",
     Unlimited = "" // Represented as empty string in GTFS
 }
+
+export interface GTFSFareAtributeObject {
+	fare_id: string;
+	price: number;
+	currency_type: string;
+	payment_method: FareAttributePaymentMethod;
+	transfers: FareAttributeTransfers;
+	agency_id?: string;
+	transfer_duration?: number;
+}
