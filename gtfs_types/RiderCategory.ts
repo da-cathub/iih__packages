@@ -1,4 +1,4 @@
-import { BooleanyValue } from "./_Univeral";
+import { BooleanyValue } from "./_Universal";
 
 export class RiderCategory {
 	id: string;
@@ -14,7 +14,7 @@ export class RiderCategory {
 			this.name = init.rider_category_name;
 			this.isDefaultRiderCategory = init.is_default_fare_category === 1;
 			this.eligibilityUrl = init.eligibility_url ? new URL(init.eligibility_url) : undefined;
-		} else if ("id" in init) {
+		} else {
 			this.id = init.id;
 			this.name = init.name;
 			this.isDefaultRiderCategory = Boolean(init.isDefaultRiderCategory);

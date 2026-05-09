@@ -1,4 +1,4 @@
-import { BooleanyValue } from "./_Univeral";
+import { BooleanyValue } from './_Universal';
 
 export class Pathway {
 	id: string;
@@ -12,12 +12,25 @@ export class Pathway {
 	maxSlope?: number;
 	minWidth?: number;
 	signpostedAs?: string;
-	reverseSignpostedAs?: string;
+	reversedSignpostedAs?: string;
 
 	constructor(init: GTFSPathwayObject);
 	constructor(init: PathwayValues);
 	constructor(init: GTFSPathwayObject | PathwayValues) {
-		if ("id" in init) {
+		if ("pathway_id" in init) {
+			this.id = init.pathway_id;
+			this.fromStop = init.from_stop_id;
+			this.toStop = init.to_stop_id;
+			this.pathwayMode = init.pathway_mode;
+			this.isBidirectional = init.is_bidirectional === 1;
+			this.length = init.length;
+			this.traversalTime = init.traversal_time;
+			this.stairCount = init.stair_count;
+			this.maxSlope = init.max_slope;
+			this.minWidth = init.min_width;
+			this.signpostedAs = init.signposted_as;
+			this.reversedSignpostedAs = init.reversed_signposted_as;
+		} else {
 			this.id = init.id;
 			this.fromStop = init.fromStop;
 			this.toStop = init.toStop;
@@ -29,20 +42,7 @@ export class Pathway {
 			this.maxSlope = init.maxSlope;
 			this.minWidth = init.minWidth;
 			this.signpostedAs = init.signpostedAs;
-			this.reverseSignpostedAs = init.reverseSignpostedAs;
-		} else if ("pathway_id" in init) {
-			this.id = init.pathway_id;
-			this.fromStop = init.from_stop_id;
-			this.toStop = init.to_stop_id;
-			this.pathwayMode = init.pathway_mode;
-			this.isBidirectional = init.is_bidirectional === 1;
-			this.length = init.length ?? 0;
-			this.traversalTime = init.traversal_time ?? 0;
-			this.stairCount = init.stair_count ?? 0;
-			this.maxSlope = init.max_slope ?? 0;
-			this.minWidth = init.min_width ?? 0;
-			this.signpostedAs = init.signposted_as ?? "";
-			this.reverseSignpostedAs = init.reverse_signposted_as ?? "";
+			this.reversedSignpostedAs = init.reversedSignpostedAs;
 		}
 	}
 
@@ -59,7 +59,7 @@ export class Pathway {
 			max_slope: this.maxSlope,
 			min_width: this.minWidth,
 			signposted_as: this.signpostedAs,
-			reverse_signposted_as: this.reverseSignpostedAs,
+			reversed_signposted_as: this.reversedSignpostedAs,
 		}
 	}
 
@@ -80,7 +80,7 @@ export interface GTFSPathwayObject {
 	max_slope?: number;
 	min_width?: number;
 	signposted_as?: string;
-	reverse_signposted_as?: string;
+	reversed_signposted_as?: string;
 }
 
 interface PathwayValues {
@@ -95,7 +95,7 @@ interface PathwayValues {
 	maxSlope?: number;
 	minWidth?: number;
 	signpostedAs?: string;
-	reverseSignpostedAs?: string;
+	reversedSignpostedAs?: string;
 }
 
 export enum PathwayMode {
@@ -106,5 +106,5 @@ export enum PathwayMode {
 	Escalator = 4,
 	Elevator = 5,
 	FareGate = 6,
-	Exit = 7,
+	ExitGate = 7,
 }

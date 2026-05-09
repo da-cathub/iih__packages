@@ -1,4 +1,4 @@
-import { BooleanyValue } from "./_Univeral";
+import { BooleanyValue } from "./_Universal";
 
 export class Frequency {
 	trip: string;
@@ -16,7 +16,7 @@ export class Frequency {
 			this.endTime = init.end_time;
 			this.headwaySecs = init.headway_secs;
 			this.exactTimes = init.exact_times ? Boolean(init.exact_times) : undefined;
-		} else if ("trip" in init) {
+		} else {
 			this.trip = init.trip;
 			this.startTime = init.startTime;
 			this.endTime = init.endTime;
