@@ -16,7 +16,7 @@ export class FareMedia {
     public toJSON() {
         return {
             "fare_media_id": this.id,
-            "fare_media_name": this.name,
+            "fare_media_name": this.name ?? "",
             "fare_media_type": this.type
         }
     }
@@ -32,4 +32,10 @@ export enum FareMediaType {
     TransitCard = 2,
     cEMV = 3,
     MobileApp = 4
+}
+
+export interface GTFSFareMediaObject {
+	fare_media_id: string;
+	fare_media_name: string;
+	fare_media_type: FareMediaType;
 }

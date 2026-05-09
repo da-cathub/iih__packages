@@ -1,12 +1,15 @@
 {
 	"name": "@isithere/gtfs",
 	"private": false,
-	"version": "1.0.0",
+	"version": "1.1.0-next-07",
 	"description": "Building, procesing and interacting with GTFS in JS easier!",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"prepublish": "tsc"
+		"build": "tsc --project tsconfig.json",
+		"prepublish": "pnpm run build",
+		"publish:next": "pnpm publish --access public --tag next"
 	},
 	"keywords": [],
 	"author": "IsItHere Team <developer_xp+npm@isithere.sk> (https://iih.icu/devs)",
@@ -16,78 +19,12 @@
 	"license": "ISC",
 	"homepage": "https://github.com/da-cathub/iih__packages/tree/master/gtfs_types#isitheregtfs",
 	"dependencies": {
-		"timezone-enum": "^1.0.4",
-		"typescript": "^5.5.4"
+		"timezone-enum": "^1.0.4"
 	},
-	"exports": {
-		".": "./index.js",
-		"./Agency": {
-			"types": "./Agency.d.ts",
-			"require": "./Agency.js"
-		},
-		"./Area": {
-			"types": "./Area.d.ts",
-			"require": "./Area.js"
-		},
-		"./Calendar": {
-			"types": "./Calendar.d.ts",
-			"require": "./Calendar.js"
-		},
-		"./CalendarDate": {
-			"types": "./CalendarDate.d.ts",
-			"require": "./CalendarDate.js"
-		},
-		"./FareAttributione": {
-			"types": "./FareAttribution.d.ts",
-			"require": "./FareAttribution.js"
-		},
-		"./FareLegRules": {
-			"types": "./FareLegRules.d.ts",
-			"require": "./FareLegRules.js"
-		},
-		"./FareMedia": {
-			"types": "./FareMedia.d.ts",
-			"require": "./FareMedia.js"
-		},
-		"./FareProduct": {
-			"types": "./FareProduct.d.ts",
-			"require": "./FareProduct.js"
-		},
-		"./FareRule": {
-			"types": "./FareRule.d.ts",
-			"require": "./FareRule.js"
-		},
-		"./FareTransferRule": {
-			"types": "./FareTransferRule.d.ts",
-			"require": "./FareTransferRule.js"
-		},
-		"./FeedInfo": {
-			"types": "./FeedInfo.d.ts",
-			"require": "./FeedInfo.js"
-		},
-		"./Network": {
-			"types": "./Network.d.ts",
-			"require": "./Network.js"
-		},
-		"./Route": {
-			"types": "./Route.d.ts",
-			"require": "./Route.js"
-		},
-		"./Stop": {
-			"types": "./Stop.d.ts",
-			"require": "./Stop.js"
-		},
-		"./StopTime": {
-			"types": "./StopTime.d.ts",
-			"require": "./StopTime.js"
-		},
-		"./Timeframe": {
-			"types": "./Timeframe.d.ts",
-			"require": "./Timeframe.js"
-		},
-		"./Trip": {
-			"types": "./Trip.d.ts",
-			"require": "./Trip.js"
-		}
+	"devDependencies": {
+		"bun-types": "^0.1.0",
+		"typescript": "^5.5.4",
+		"@types/node": "^20.4.3",
+		"@types/timezone-enum": "^1.0.0"
 	}
 }
